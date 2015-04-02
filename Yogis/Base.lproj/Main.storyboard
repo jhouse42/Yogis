@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BZh-zE-wI1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="mVC" id="vXZ-lx-hvc" customClass="ViewController" customModule="Yogis" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DNp-iv-3a2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DNp-iv-3a2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Gra-TF-Efq"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DNp-iv-3a2" secondAttribute="bottom" id="iGh-jL-jUC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DNp-iv-3a2" secondAttribute="trailing" constant="-16" id="sWa-mt-Zsq"/>
+                            <constraint firstItem="DNp-iv-3a2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="vry-bD-xAt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xsi-FG-M90">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="n3u-cu-bU8">
+                            <connections>
+                                <action selector="cancelButton:" destination="vXZ-lx-hvc" id="fu3-K0-WH9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="DNp-iv-3a2" id="0Y6-Z3-EFa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="1158"/>
+        </scene>
+        <!--Venues Table View Controller-->
+        <scene sceneID="T5j-c9-BTJ">
+            <objects>
+                <tableViewController storyboardIdentifier="VTVC" id="8x1-L6-g9Q" customClass="VenuesTableViewController" customModule="Yogis" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pNh-Zw-rGx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="venueCell" id="6FP-Nf-5pp">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6FP-Nf-5pp" id="6e6-ZD-xa9">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8x1-L6-g9Q" id="cxg-y3-Dq5"/>
+                            <outlet property="delegate" destination="8x1-L6-g9Q" id="8zW-gI-tax"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="RjQ-xB-E1y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drg-3W-Sqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="472"/>
+        </scene>
+        <!--InfoVC-->
+        <scene sceneID="LY7-a0-WPU">
+            <objects>
+                <viewController storyboardIdentifier="IVC" id="1cq-t0-POG" customClass="InfoVC" customModule="Yogis" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="apf-L6-mCS"/>
+                        <viewControllerLayoutGuide type="bottom" id="B7I-3N-DaE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hpu-6f-Op7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yoga1" translatesAutoresizingMaskIntoConstraints="NO" id="U6Z-VJ-jfv">
+                                <rect key="frame" x="260" y="87" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="86E-Gt-6mJ"/>
+                                    <constraint firstAttribute="height" constant="80" id="afF-wC-Tp8"/>
+                                    <constraint firstAttribute="width" constant="80" id="kNa-AN-crg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You ebb and flow, you struggle and grow. You stretch, you sweat, you breathe. Now come and find your community." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-ik-rTD">
+                                <rect key="frame" x="16" y="193" width="568" height="283"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="283" id="65J-Up-jyV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vP-hx-6N3" customClass="CircleButton" customModule="Yogis" customModuleProvider="target">
+                                <rect key="frame" x="260" y="502" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="TTE-wb-zw5"/>
+                                    <constraint firstAttribute="width" constant="80" id="w2A-44-sqQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Yogis">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findButton:" destination="1cq-t0-POG" eventType="touchUpInside" id="T50-cF-Yfe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14846757820000001" green="0.44884339449999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5vP-hx-6N3" firstAttribute="trailing" secondItem="U6Z-VJ-jfv" secondAttribute="trailing" id="9hB-PL-tcu"/>
+                            <constraint firstItem="m3n-ik-rTD" firstAttribute="top" secondItem="hpu-6f-Op7" secondAttribute="top" constant="193" id="IyO-39-5dp"/>
+                            <constraint firstItem="U6Z-VJ-jfv" firstAttribute="top" secondItem="apf-L6-mCS" secondAttribute="bottom" constant="23" id="MGM-nU-GVa"/>
+                            <constraint firstItem="m3n-ik-rTD" firstAttribute="centerX" secondItem="U6Z-VJ-jfv" secondAttribute="centerX" id="SaL-Zp-AAP"/>
+                            <constraint firstItem="B7I-3N-DaE" firstAttribute="top" secondItem="5vP-hx-6N3" secondAttribute="bottom" constant="18" id="WvK-Ow-IGu"/>
+                            <constraint firstItem="m3n-ik-rTD" firstAttribute="leading" secondItem="hpu-6f-Op7" secondAttribute="leadingMargin" id="b0l-9G-17L"/>
+                            <constraint firstItem="5vP-hx-6N3" firstAttribute="top" secondItem="m3n-ik-rTD" secondAttribute="bottom" constant="26" id="b91-gP-Sjz"/>
+                            <constraint firstItem="m3n-ik-rTD" firstAttribute="top" secondItem="U6Z-VJ-jfv" secondAttribute="bottom" constant="26" id="jqh-an-OOE"/>
+                            <constraint firstItem="B7I-3N-DaE" firstAttribute="top" secondItem="U6Z-VJ-jfv" secondAttribute="bottom" constant="433" id="pb2-1K-9L0"/>
+                            <constraint firstItem="5vP-hx-6N3" firstAttribute="leading" secondItem="U6Z-VJ-jfv" secondAttribute="leading" id="unB-06-XRK"/>
+                            <constraint firstItem="U6Z-VJ-jfv" firstAttribute="centerX" secondItem="hpu-6f-Op7" secondAttribute="centerX" id="ynw-St-P7Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hke-CA-tzs"/>
+                    <connections>
+                        <outlet property="image" destination="U6Z-VJ-jfv" id="esQ-DG-c7a"/>
+                        <outlet property="infoText" destination="m3n-ik-rTD" id="PSc-cV-LgR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcd-PR-L8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="467"/>
+        </scene>
+        <!--Yoga Locations-->
+        <scene sceneID="hge-Zh-MU8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4YO-W1-fFZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Yoga Locations" image="MyMapsBarIcon.png" id="Yjy-QB-qC3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wh3-jY-Nxb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="R0w-2d-GLR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cM-A9-E3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="1158"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tsS-1o-WQG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Ar-XU-bLl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="21r-Vx-9Rr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8x1-L6-g9Q" kind="relationship" relationship="rootViewController" id="cKM-rC-yQT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOa-nA-mx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="472"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="43T-iY-d5v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BZh-zE-wI1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LjD-Jl-SAX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1cq-t0-POG" kind="relationship" relationship="rootViewController" id="aue-4c-c7b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COh-FL-lzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="467"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MyMapsBarIcon.png" width="22" height="25"/>
+        <image name="yoga1" width="1000" height="1000"/>
+    </resources>
+</document>
