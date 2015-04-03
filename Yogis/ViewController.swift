@@ -67,22 +67,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     
- override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//    var nyaLocation = CLLocationCoordinate2DMake(34.059766, -83.997431) 
-//        // Drop a pin
-//        
-//        var dropPin = MKPointAnnotation()
-//        dropPin.coordinate = nyaLocation
-//        dropPin.title = "Private Lessons"
-//        dropPin.subtitle = "nyayoga@gmail.com"
-//        
-//        mapView.addAnnotation(dropPin)
-//        
-    
-    }
-    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -90,16 +74,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         
     }
+  
     
-    
-    
-    // MAKE ANNOTATIONS FOR FEED ITEMS
-    
-    func createAnnotationsWithStudios(courts: [PFObject]) {
+    func createAnnotationsWithStudios(studios: [PFObject]) {
         
-        for (i,courts) in enumerate(courts) {
+        for (i,studios) in enumerate(studios) {
             
-            let venue = courts["venue"] as [String:AnyObject]
+            let venue = studios["venue"] as [String:AnyObject]
             
             let locationName = venue["name"] as String
             
@@ -124,7 +105,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
             var information = MKPointAnnotation()
             information.coordinate = location
-            information.title = courts["name"] as String
+            information.title = studios["name"] as String
             information.subtitle = "subtitle"
             
             
@@ -186,23 +167,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         var rightArrowButton = ArrowButton(frame: CGRectMake(0, 0, 30, 30))
         
-        
-//        let label = UILabel(frame: CGRectMake(0, 0, 10, 5))
-//        label.text = "Save"
-//        
-//        label.textColor = UIColor.blackColor()
-//        label.addSubview(annotationView)
-//        
-//        let locButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-//        locButton.frame = CGRectMake(0, 0, 40, 40)
-//        locButton.backgroundColor = UIColor.cyanColor()
-//        locButton.layer.cornerRadius = 40 / 2
-//        locButton.setTitle("List", forState: UIControlState.Normal)
-//        locButton.addTarget(self, action: "locationPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-//        locButton.addSubview(annotationView)
-//        
-//        
-        
         rightArrowButton.strokeSize = 2
         rightArrowButton.leftInset = 8
         rightArrowButton.rightInset = 8
@@ -231,21 +195,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return annotationView
         
     }
-    
-    
-//    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
-//        
-//        
-//        // TODO: make this so it only sets venueLocation if the left calloutaccessory was tapped
-//        
-//        
-//        if (control == view.leftCalloutAccessoryView) {
-//            
-//            venueLocation = view.annotation.title}
-//        
-//        
-//        view.annotation.title
-//    }
     
     
     
@@ -291,25 +240,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
     }
     
-//    func locationPressed (sender : UIButton) {
-//        println("location Pressed")
-//        
-//        
-//        
-//        var locVC = storyboard?.instantiateViewControllerWithIdentifier("VTVC") as VenuesTableViewController
-//        
-//        locVC.user = user
-//        
-//        navigationController?.pushViewController(locVC, animated: true)
-//        
-//        
-//        
-//        
-//        
-//        
-//    }
-//    
-//    
+    
     
 }//end
 

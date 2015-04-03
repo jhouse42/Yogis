@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0FEA963D-DA99-4846-9289-3706DF46400D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Yogis</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E9F091440B4C8D94747394B04D4274315B0184F0</key>
+		<string>https://github.com/jhouse42/Yogis.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Yogis.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E9F091440B4C8D94747394B04D4274315B0184F0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jhouse42/Yogis.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E9F091440B4C8D94747394B04D4274315B0184F0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E9F091440B4C8D94747394B04D4274315B0184F0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Yogis</string>
+		</dict>
+	</array>
+</dict>
+</plist>

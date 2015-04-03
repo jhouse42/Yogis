@@ -39,11 +39,6 @@ class VenuesTableViewController: UITableViewController, CLLocationManagerDelegat
         
         tableView.tableFooterView = UIView(frame:CGRectZero)
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -75,8 +70,6 @@ class VenuesTableViewController: UITableViewController, CLLocationManagerDelegat
     
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
         return foundVenues.count
     }
 
@@ -113,8 +106,6 @@ class VenuesTableViewController: UITableViewController, CLLocationManagerDelegat
         
         FeedData.mainData().selectedVenue = venue
         
-        //dismissViewControllerAnimated(true, completion: nil)
-        
         var mVC = storyboard?.instantiateViewControllerWithIdentifier("mVC") as ViewController
         
         mVC.user = user
@@ -125,25 +116,17 @@ class VenuesTableViewController: UITableViewController, CLLocationManagerDelegat
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
-        // Determine if the post is displayed. If yes, we just return and no animation will be created
         if postShown[indexPath.row] {
             return;
         }
         
-        // Indicate the post has been displayed, so the animation won't be displayed again
         postShown[indexPath.row] = true
-        
-        
-        
-        
-        
-        // Define the initial state (Before the animation)
+
         let rotationAngleInRadians = 90.0 * CGFloat(M_PI/180.0);
-        //        let rotationTransform = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1);
+    
         let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
         cell.layer.transform = rotationTransform;
-        
-        // Define the final state (After the animation)
+      
         UIView.animateWithDuration(1.0, animations: { cell.layer.transform = CATransform3DIdentity })
         
     }

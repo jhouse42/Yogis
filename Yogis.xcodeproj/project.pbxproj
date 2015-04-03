@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70919EEE1ACC69FF00E4814A /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70919EED1ACC69FF00E4814A /* Pin.swift */; };
 		709C84D31AC851F3008831FD /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C84D21AC851F3008831FD /* CircleButton.swift */; };
 		70B592351ACC3A0E0009D6C8 /* VenuesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B592341ACC3A0E0009D6C8 /* VenuesTableViewController.swift */; };
 		70B592371ACC3A5D0009D6C8 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B592361ACC3A5D0009D6C8 /* FeedData.swift */; };
@@ -36,7 +35,6 @@
 		70B7A43B1AC231140072FC0F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B7A43A1AC231140072FC0F /* SystemConfiguration.framework */; };
 		70B7A43D1AC2311D0072FC0F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B7A43C1AC2311D0072FC0F /* libz.dylib */; };
 		70B7A43F1AC231260072FC0F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B7A43E1AC231260072FC0F /* libsqlite3.dylib */; };
-		70B7A4451AC238AB0072FC0F /* PrettyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7A4441AC238AB0072FC0F /* PrettyButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		70919EED1ACC69FF00E4814A /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		709C84D21AC851F3008831FD /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		70B592341ACC3A0E0009D6C8 /* VenuesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTableViewController.swift; sourceTree = "<group>"; };
 		70B592361ACC3A5D0009D6C8 /* FeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 		70B7A43C1AC2311D0072FC0F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		70B7A43E1AC231260072FC0F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		70B7A4401AC237BC0072FC0F /* Yogis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yogis-Bridging-Header.h"; sourceTree = "<group>"; };
-		70B7A4441AC238AB0072FC0F /* PrettyButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +184,6 @@
 			children = (
 				70B592361ACC3A5D0009D6C8 /* FeedData.swift */,
 				70B7A41A1AC22D8F0072FC0F /* Foursquare.swift */,
-				70919EED1ACC69FF00E4814A /* Pin.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -222,7 +217,6 @@
 			children = (
 				709C84D21AC851F3008831FD /* CircleButton.swift */,
 				70B7A41D1AC22F8F0072FC0F /* ArrowButton.swift */,
-				70B7A4441AC238AB0072FC0F /* PrettyButtons.swift */,
 			);
 			name = DesignElements;
 			sourceTree = "<group>";
@@ -333,8 +327,6 @@
 				70B7A41B1AC22D8F0072FC0F /* Foursquare.swift in Sources */,
 				70B592391ACC459C0009D6C8 /* InfoVC.swift in Sources */,
 				709C84D31AC851F3008831FD /* CircleButton.swift in Sources */,
-				70919EEE1ACC69FF00E4814A /* Pin.swift in Sources */,
-				70B7A4451AC238AB0072FC0F /* PrettyButtons.swift in Sources */,
 				70B7A3FB1AC22D440072FC0F /* AppDelegate.swift in Sources */,
 				70B7A41E1AC22F8F0072FC0F /* ArrowButton.swift in Sources */,
 				70B592351ACC3A0E0009D6C8 /* VenuesTableViewController.swift in Sources */,
