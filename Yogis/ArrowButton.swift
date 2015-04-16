@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreLocation
-
+import Parse
 
 
 @IBDesignable class ArrowButton: UIButton {
