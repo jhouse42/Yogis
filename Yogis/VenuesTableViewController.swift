@@ -15,7 +15,7 @@ import MapKit
 
 class VenuesTableViewController: UITableViewController, CLLocationManagerDelegate {
     
-    var user: PFUser!
+    //var user: PFUser!
     var onceToken:dispatch_once_t = 0
     
     var lManager = CLLocationManager()
@@ -76,9 +76,9 @@ class VenuesTableViewController: UITableViewController, CLLocationManagerDelegat
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("venueCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("venueCell", forIndexPath: indexPath) as! UITableViewCell
 
-        let venue = foundVenues[indexPath.row] as [String:AnyObject]
+        let venue = foundVenues[indexPath.row] as! [String:AnyObject]
         
         
         cell.textLabel?.text = venue["name"] as? String
@@ -100,15 +100,11 @@ class VenuesTableViewController: UITableViewController, CLLocationManagerDelegat
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         
-         let venue = foundVenues[indexPath.row] as [String:AnyObject]
+         let venue = foundVenues[indexPath.row] as! [String:AnyObject]
+
+         var mVC = storyboard?.instantiateViewControllerWithIdentifier("mVC") as! ViewController
         
-        // save the venue
-        
-        FeedData.mainData().selectedVenue = venue
-        
-        var mVC = storyboard?.instantiateViewControllerWithIdentifier("mVC") as ViewController
-        
-        mVC.user = user
+       // mVC.user = user()
         
         navigationController?.pushViewController(mVC, animated: true)
         

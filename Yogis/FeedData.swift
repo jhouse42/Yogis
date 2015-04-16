@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 
 let _mainData: FeedData = FeedData()
 

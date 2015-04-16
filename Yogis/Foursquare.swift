@@ -12,7 +12,7 @@ import CoreLocation
 
 let API_URL = "https://api.foursquare.com/v2/venues/search?"
 
-let VENUE_ID = "https://api.foursquare.com/v2/venues/VENUE_ID/hours"
+//let VENUE_ID = "https://api.foursquare.com/v2/venues/VENUE_ID/hours"
 
 let CLIENT_ID = "2X3ZDBL2JCCX54RIXIDGX4M4ZYU3XXYTKUMZ3ZO3X5HNDJP3"
 
@@ -26,7 +26,7 @@ class Foursquare: NSObject {
     class func requestVenuesWithLocation(location: CLLocation) -> [AnyObject] {
         
         //categories, tenniscourts
-        let requestString = "\(API_URL)client_id=\(CLIENT_ID)&client_secret=\(CLIENT_SECRET)&v=20130815&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&query=\(YOGA_QUERY)&query=\(VENUE_ID)"
+        let requestString = "\(API_URL)client_id=\(CLIENT_ID)&client_secret=\(CLIENT_SECRET)&v=20130815&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&query=\(YOGA_QUERY)"
         
         println(requestString)
         
@@ -45,36 +45,26 @@ class Foursquare: NSObject {
                         println(responseInfo)
                         
                         
-                        return responseInfo["venues"] as [AnyObject]
+                        return responseInfo["venues"] as! [AnyObject]
                     }
                     if let responseInfo = returnInfo["timeframes"] as? [String:AnyObject]{
                         println(responseInfo)
                         
                         
-                        return responseInfo["venues"] as [AnyObject]
+                        return responseInfo["venues"] as! [AnyObject]
                     }
                     
                 }
-                
-                
-                
+      
             }
-            
-            
-            
+      
         }
-        
-        
+  
         
         return []
         
     }
     
-    
-    
-
-
-
 
 }
 

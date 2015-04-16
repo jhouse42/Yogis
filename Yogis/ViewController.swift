@@ -25,7 +25,7 @@ class MyPointAnnotation: MKPointAnnotation {
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    var user: PFUser!
+    //var user: PFUser!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -76,20 +76,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
   
     
-    func createAnnotationsWithStudios(studios: [PFObject]) {
+    func createAnnotationsWithStudios(studios: [AnyObject]) {
         
         for (i,studios) in enumerate(studios) {
             
-            let venue = studios["venue"] as [String:AnyObject]
+            let venue = studios["venue"] as! [String:AnyObject]
             
-            let locationName = venue["name"] as String
+            let locationName = venue["name"] as! String
             
             
             
-            let locationInfo = venue["location"] as [String:AnyObject]
+            let locationInfo = venue["location"] as! [String:AnyObject]
             
-            let lat = locationInfo["lat"] as CLLocationDegrees
-            let lng = locationInfo["lng"] as CLLocationDegrees
+            let lat = locationInfo["lat"] as! CLLocationDegrees
+            let lng = locationInfo["lng"] as! CLLocationDegrees
             
             let coordinate = CLLocationCoordinate2DMake(lat,lng)
             
@@ -97,7 +97,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             annotation.index = i
             
-            annotation.setCoordinate(coordinate)
+            annotation.coordinate = coordinate
             
             mapView.addAnnotation(annotation)
             
@@ -105,7 +105,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
             var information = MKPointAnnotation()
             information.coordinate = location
-            information.title = studios["name"] as String
+            information.title = studios["name"] as! String
             information.subtitle = "subtitle"
             
             
@@ -136,16 +136,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             let venueName = venue["name"] as? String
             
-            let locationInfo = venue["location"] as [String:AnyObject]
+            let locationInfo = venue["location"] as! [String:AnyObject]
             
-            let lat = locationInfo["lat"] as CLLocationDegrees
-            let lng = locationInfo["lng"] as CLLocationDegrees
+            let lat = locationInfo["lat"] as! CLLocationDegrees
+            let lng = locationInfo["lng"] as! CLLocationDegrees
             
             let coordinate = CLLocationCoordinate2DMake(lat,lng)
             
             let annotation = MKPointAnnotation()
             
-            annotation.setCoordinate(coordinate)
+//            annotation.setCoordinate(coordinate)
+            annotation.coordinate = coordinate
             
             
             if let venueName = venueName { annotation.title = venueName }
