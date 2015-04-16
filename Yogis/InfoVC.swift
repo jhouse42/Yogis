@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Parse
 
 class InfoVC: UIViewController {
     
-      var user: PFUser!
+      //var user: PFUser!
 
     @IBOutlet weak var image: UIImageView!
     
@@ -18,9 +19,9 @@ class InfoVC: UIViewController {
     
     @IBAction func findButton(sender: AnyObject) {
         
-        var fVC = storyboard?.instantiateViewControllerWithIdentifier("VTVC") as VenuesTableViewController
+        var fVC = storyboard?.instantiateViewControllerWithIdentifier("VTVC") as! VenuesTableViewController
         
-        fVC.user = user
+        //fVC.user = user()
         
         navigationController?.pushViewController(fVC, animated: true)
         

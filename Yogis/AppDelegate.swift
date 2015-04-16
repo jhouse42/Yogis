@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        Parse.setApplicationId("zA2g8XWEv1lXbsbqGzX9etdemXpsz5IUUZ4zTrcn",
+            clientKey: "P3lCkCK29uRJlg90kQ0ddV0HXXQlS6I6NLW5UlNQ")
         
         
-        Parse.setApplicationId("FlGUsj6E5R62F3C93Wq9uYQxdrtzcUsEfjSYf8he",
-            clientKey:"ApYfwrGhERt8SugcsKiYy5XNTZaEJ3KBEBjLyLlG")
-        
+         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         // Register for Push Notitications
         
