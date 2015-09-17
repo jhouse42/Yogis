@@ -1,6 +1,6 @@
 //
 //  VenuesTableViewController.swift
-//  Sit Fit
+// 
 //
 //  Created by Jeanie House on 2/5/15.
 //  Copyright (c) 2015 Jeanie House. All rights reserved.

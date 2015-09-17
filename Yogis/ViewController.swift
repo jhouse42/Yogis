@@ -206,7 +206,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         dispatch_once(&onceToken) { () -> Void in
             
-            println(locations.last)
+            print(locations.last)
             
             if let location = locations.last as? CLLocation {
                 
@@ -228,7 +228,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
    
     
     func buttonClicked (sender : ArrowButton!) {
-        println("Button Clicked")
+        print("Button Clicked")
         
         let myCurrentMapItem = MKMapItem.mapItemForCurrentLocation()
         
